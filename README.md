@@ -1,55 +1,58 @@
-# 🔐 Lazorkit Passkey & Gasless Starter
+# 🔐 Lazorkit Passkey Gasless Starter
 
-Passwordless Solana smart wallet demo using **Lazorkit SDK**, **passkeys**, and **gasless transactions**.
-
-This project demonstrates how Web3 apps can onboard users **without browser wallets, seed phrases, or gas fees**, using OS-native authentication and smart wallets.
+A minimal **Next.js** starter demonstrating **passkey-based authentication**,  
+**smart wallet creation**, **session persistence**, and **gasless transactions**  
+using **Lazorkit SDK** on **Solana Devnet**.
 
 ---
 
 ## ✨ Features
 
-- 🔑 Passkey-based authentication (WebAuthn)
-- 👛 Automatic Solana smart wallet creation
+- 🔐 Passkey-based authentication (passwordless)
+- 👛 Smart wallet creation via Lazorkit
 - ♻️ Session persistence (auto reconnect)
-- ⛽ Gasless transaction flow (Paymaster – demo/stub)
-- 🧼 Clean Next.js App Router structure
-- 🌑 Dark / glass Web3 UI
+- ⛽ Gasless transaction flow (Paymaster stub)
+- ⚡ Built with Next.js App Router
 
 ---
 
 ## 🧱 Tech Stack
 
-- Next.js (App Router)
-- React
-- Lazorkit Wallet SDK
-- Solana Web3.js
-- Tailwind CSS
-- Solana Devnet
+- **Next.js** (App Router)
+- **React**
+- **Lazorkit Wallet SDK**
+- **Solana Web3.js**
+- **Tailwind CSS**
+- **Solana Devnet**
 
 ---
 
 ## 📁 Project Structure
 
+```txt
 app/
-├─ page.tsx # Main UI
-├─ layout.tsx # Root layout
-├─ providers.tsx # Lazorkit provider
-└─ api/gasless-transfer/
-└─ route.ts # Gasless tx stub
-components/
-├─ LoginButton.tsx
-├─ WalletInfo.tsx
-├─ GaslessTransfer.tsx
-└─ NotConnected.tsx
+├─ page.tsx            # Main UI
+├─ layout.tsx          # Root layout
+├─ providers.tsx       # Lazorkit provider
+├─ globals.css
+├─ api/
+│  └─ gasless-transfer/
+│     └─ route.ts      # Gasless tx stub
+│
+├─ components/
+│  ├─ LoginButton.tsx
+│  ├─ WalletInfo.tsx
+│  ├─ GaslessTransfer.tsx
+│  └─ NotConnected.tsx
+│
 lib/
-└─ env.ts
+└─ env.ts              # Environment helpers
+
 tutorials/
 ├─ 01-passkey-wallet.md
 ├─ 02-session-persistence.md
 └─ 03-gasless-transaction.md
 
-
----
 
 ## ⚙️ Installation
 
