@@ -1,5 +1,12 @@
 import { Providers } from "./providers";
 import "./globals.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Passkey Portal",
+  description: "Passwordless Solana smart wallet using passkeys & gasless transactions",
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -7,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className="relative">
         <Providers>{children}</Providers>
       </body>
     </html>
