@@ -1,36 +1,124 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🔐 Lazorkit Passkey & Gasless Starter
 
-## Getting Started
+Passwordless Solana smart wallet demo using **Lazorkit SDK**, **passkeys**, and **gasless transactions**.
 
-First, run the development server:
+This project demonstrates how Web3 apps can onboard users **without browser wallets, seed phrases, or gas fees**, using OS-native authentication and smart wallets.
+
+---
+
+## ✨ Features
+
+- 🔑 Passkey-based authentication (WebAuthn)
+- 👛 Automatic Solana smart wallet creation
+- ♻️ Session persistence (auto reconnect)
+- ⛽ Gasless transaction flow (Paymaster – demo/stub)
+- 🧼 Clean Next.js App Router structure
+- 🌑 Dark / glass Web3 UI
+
+---
+
+## 🧱 Tech Stack
+
+- Next.js (App Router)
+- React
+- Lazorkit Wallet SDK
+- Solana Web3.js
+- Tailwind CSS
+- Solana Devnet
+
+---
+
+## 📁 Project Structure
+
+app/
+├─ page.tsx # Main UI
+├─ layout.tsx # Root layout
+├─ providers.tsx # Lazorkit provider
+└─ api/gasless-transfer/
+└─ route.ts # Gasless tx stub
+components/
+├─ LoginButton.tsx
+├─ WalletInfo.tsx
+├─ GaslessTransfer.tsx
+└─ NotConnected.tsx
+lib/
+└─ env.ts
+tutorials/
+├─ 01-passkey-wallet.md
+├─ 02-session-persistence.md
+└─ 03-gasless-transaction.md
+
+
+---
+
+## ⚙️ Installation
 
 ```bash
+git clone https://github.com/your-username/lazorkit-passkey-gasless-starter
+cd lazorkit-passkey-gasless-starter
+npm install
+
+🔐 Environment Setup
+
+Create .env.local:
+
+NEXT_PUBLIC_SOLANA_RPC=https://api.devnet.solana.com
+NEXT_PUBLIC_LAZORKIT_PORTAL=https://portal.lazor.sh
+NEXT_PUBLIC_LAZORKIT_PAYMASTER=https://kora.devnet.lazorkit.com
+
+
+ℹ️ No API key required for Devnet usage.
+
+▶️ Run Locally
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Open:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+http://localhost:3000
 
-## Learn More
+🧪 Demo Flow
 
-To learn more about Next.js, take a look at the following resources:
+Open the app
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Click Login with Passkey
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Authenticate using your OS passkey
 
-## Deploy on Vercel
+Smart wallet is created or restored automatically
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Wallet address is displayed
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Gasless transfer section becomes available (demo)
+
+No extensions. No seed phrase. No manual gas fees.
+
+🧠 Notes
+
+This is a demo / starter, not a production dApp
+
+Gasless transfer logic is a stub
+
+Designed for clarity and hackability
+
+Ready to be extended by developers
+
+🚀 Possible Extensions
+
+Real SOL or SPL token transfers
+
+Token balance display
+
+Subscription or payment flows
+
+Mainnet deployment with Paymaster
+
+📚 Resources
+
+Lazorkit Docs: https://docs.lazorkit.com
+
+Lazorkit GitHub: https://github.com/lazor-kit/lazor-kit
+
+📜 License
+
+MIT
