@@ -125,6 +125,17 @@ Navigate to [http://localhost:3000](http://localhost:3000)
 
 ## 📝 Usage Notes
 
+## ⚠️ Devnet & Paymaster Notice
+
+This project uses Lazorkit Devnet infrastructure for demonstration purposes.
+During testing, passkey authentication is successfully triggered at the OS level
+(WebAuthn). However, gasless transaction execution may fail if the Devnet
+Paymaster endpoint is temporarily unavailable.
+
+This does not affect the validity of the SDK integration or wallet creation flow.
+The repository focuses on providing a clear and reusable integration example
+rather than a production-ready payment system.
+
 ### Current Status
 
 - ✅ **Production Ready:** Passkey authentication and wallet creation
